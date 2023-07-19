@@ -1,3 +1,11 @@
+.main_container {
+  height: 100vh;
+  background-image: url(https://images7.alphacoders.com/374/thumb-1920-374296.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .navbar {
   width: 100%;
   height: 70px;
@@ -10,7 +18,9 @@
 .navbar h1 {
   color: white;
   font-size: 25px;
-  margin-left: 20px;
+  margin-right: auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .white_btn {
@@ -34,4 +44,27 @@
   font-weight: bold;
   font-size: 20px;
   cursor: pointer;
+}
+.bottom_right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.container_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  width: 50%;
+  height: 800px;
+  border: 2px solid blue;
+  padding: 10px;
+  opacity: 0.5;
+}
+.container_center button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

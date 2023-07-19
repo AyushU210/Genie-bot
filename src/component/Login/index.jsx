@@ -1,7 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+
 import styles from "./styles.module.css";
+import Swal from "sweetalert";
 
 const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
@@ -27,6 +28,14 @@ const Login = () => {
         setError(error.response.data.message);
       }
     }
+  };
+
+  const contact_alert = () => {
+    Swal({
+      text: "Your request has been sent to PnC team",
+
+      icon: "success",
+    });
   };
 
   return (
@@ -60,12 +69,14 @@ const Login = () => {
           </form>
         </div>
         <div className={styles.right}>
-          <h1>New Here ?</h1>
-          <Link to="/signup">
-            <button type="button" className={styles.white_btn}>
-              Sign Up
-            </button>
-          </Link>
+          <button
+            type="button"
+            onClick={contact_alert}
+            className={styles.white_btn}
+            disabled={!data.email}
+          >
+            Forgot Password?
+          </button>
         </div>
       </div>
     </div>
